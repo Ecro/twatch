@@ -1,0 +1,28 @@
+# Task ID: 10
+# Title: Create Tutorial Onboarding Animation
+# Status: pending
+# Dependencies: 1
+# Priority: low
+# Description: Develop an engaging onboarding animation that introduces the concept of gesture scoring to new users.
+# Details:
+Create a brief (5-10 second) onboarding animation that:
+
+1. Shows a stylized tennis player making a scoring gesture
+2. Demonstrates the watch recognizing the gesture
+3. Shows the score changing on the watch face
+4. Communicates the core value proposition visually
+5. Uses minimal text to support the visual story
+6. Optimizes for the circular watch display
+7. Sets a friendly, approachable tone for the app
+8. Transitions smoothly into the first tutorial screen
+
+Use vector animations to minimize file size and ensure smooth playback. The animation should be skippable with a tap for returning users.
+
+# Test Strategy:
+1. Test animation performance on actual Galaxy Watch 5 hardware
+2. Measure load time and ensure it doesn't delay app startup significantly
+3. Test with users to ensure the concept is clearly communicated
+4. Verify animation displays correctly on the circular screen
+5. Test skip functionality works properly
+6. Measure battery impact of the animation
+7. Validate that animation sets appropriate expectations for the app

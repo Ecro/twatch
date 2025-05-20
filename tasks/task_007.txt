@@ -1,0 +1,29 @@
+# Task ID: 7
+# Title: Integrate Tutorial with Main App Flow
+# Status: pending
+# Dependencies: 4, 6
+# Priority: medium
+# Description: Connect the tutorial experience with the main app flow, ensuring it appears for first-time users and can be accessed later if needed.
+# Details:
+Implement logic to:
+
+1. Show tutorial automatically on first app launch
+2. Store completion status in local preferences
+3. Add a 'Tutorial' option in the app settings menu
+4. Create smooth transition from tutorial completion to main match setup screen
+5. Implement a 'quick reminder' option that shows abbreviated gesture guides
+6. Add logic to suggest tutorial if multiple gesture misrecognitions occur
+7. Create a tutorial completion event that triggers appropriate analytics
+8. Handle edge cases like app updates or reinstallation
+
+Use SharedPreferences to store tutorial completion status. Ensure the tutorial can be triggered programmatically from multiple entry points in the app.
+
+# Test Strategy:
+1. Test first-launch experience on fresh installation
+2. Verify tutorial doesn't appear for returning users
+3. Test manual launch from settings menu
+4. Validate analytics events are properly triggered
+5. Test quick reminder functionality
+6. Verify tutorial suggestion logic works when gesture errors occur
+7. Test across app updates to ensure preferences are preserved
+8. Validate transition animations between tutorial and main app

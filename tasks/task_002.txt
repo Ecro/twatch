@@ -1,0 +1,32 @@
+# Task ID: 2
+# Title: Develop Tutorial Script Content
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Write clear, concise tutorial script content that guides users through learning the four tennis score gestures.
+# Details:
+Create script content for each tutorial screen:
+
+1. Welcome screen: "Welcome to Gesture Scoreboard! Track your tennis scores with simple wrist gestures."
+
+2. Purpose explanation: "This app lets you record scores without touching your watch. Just use one of four wrist gestures during play."
+
+3. For each gesture (create separate screens):
+   - 15 points gesture: "For 15 points, quickly flick your wrist up once."
+   - 30 points gesture: "For 30 points, quickly flick your wrist up twice."
+   - 40 points gesture: "For 40 points, quickly flick your wrist down once."
+   - Game point gesture: "To record a game win, make a clockwise circle motion."
+
+4. Practice instructions: "Let's practice! Try each gesture when prompted and feel the watch vibrate when recognized."
+
+5. Completion message: "Great job! You're ready to start tracking scores. Start a match when you're ready to play."
+
+Keep all text under 100 characters per screen to ensure readability on the watch display. Use active voice and simple language.
+
+# Test Strategy:
+1. Review script with tennis players to ensure terminology is correct
+2. Test readability on actual Galaxy Watch 5 devices
+3. Verify character count stays within limits for each screen
+4. Conduct A/B testing with alternative phrasings if possible
+5. Ensure instructions match the actual gesture recognition implementation
+6. Test with non-tennis players to ensure clarity for beginners

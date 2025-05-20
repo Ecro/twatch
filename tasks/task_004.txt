@@ -1,0 +1,70 @@
+# Task ID: 4
+# Title: Develop Practice Mode for Tutorial
+# Status: pending
+# Dependencies: 2, 3
+# Priority: medium
+# Description: Create an interactive practice mode that allows users to try each gesture and receive immediate feedback during the tutorial.
+# Details:
+Implement a practice mode component that:
+
+1. Prompts user to perform each gesture one at a time
+2. Listens for gesture input using the IMU pattern recognition system
+3. Provides visual feedback when gesture is detected:
+   - Green checkmark and text for correct gesture
+   - Red X and hint text for incorrect gesture
+4. Delivers haptic feedback:
+   - Short vibration for correct gesture
+   - Long vibration for incorrect gesture
+5. Shows a countdown timer (3-5 seconds) for each practice attempt
+6. Allows multiple attempts per gesture
+7. Includes a 'Skip Practice' option
+8. Tracks success rate to determine if additional practice is needed
+
+The practice mode should use the same gesture recognition logic that will be used in the main app to ensure consistency between training and actual use.
+
+# Test Strategy:
+1. Test gesture recognition accuracy with various users
+2. Verify haptic feedback works correctly for both success and failure cases
+3. Test timer functionality and ensure it's visible and understandable
+4. Validate that practice mode correctly identifies all four gestures
+5. Test edge cases where gestures might be confused with each other
+6. Ensure skip functionality works properly
+7. Test with users of different physical abilities and wrist sizes
+
+# Subtasks:
+## 1. Integrate Gesture Detection System [pending]
+### Dependencies: None
+### Description: Implement and integrate the gesture detection module using an IMU pattern recognition system or a framework like MediaPipe. Ensure real-time gesture recognition and accurate mapping to tutorial actions.
+### Details:
+Set up the gesture detection pipeline, preprocess input data, and connect the recognition output to the practice mode logic.
+
+## 2. Develop Visual Feedback System [pending]
+### Dependencies: 4.1
+### Description: Create a visual feedback mechanism that responds to detected gestures, providing users with immediate, clear cues about their performance.
+### Details:
+Design UI elements (e.g., overlays, animations, color changes) that indicate correct or incorrect gestures and guide users through the tutorial steps.
+
+## 3. Implement Haptic Feedback [pending]
+### Dependencies: 4.1
+### Description: Add haptic feedback (e.g., vibration) to reinforce gesture recognition results, enhancing the user's learning experience.
+### Details:
+Configure device vibration or other haptic responses to trigger on gesture success, failure, or other key tutorial events.
+
+## 4. Build Attempt Tracking and Timing System [pending]
+### Dependencies: 4.1
+### Description: Track each user attempt, including timing and number of tries, to monitor progress and provide performance insights.
+### Details:
+Log gesture attempts, record timestamps, and store relevant data for later analysis and feedback.
+
+## 5. Add Skip Functionality [pending]
+### Dependencies: 4.2, 4.3, 4.4
+### Description: Implement a feature allowing users to skip tutorial steps or gestures, ensuring flexibility and user control.
+### Details:
+Provide a UI control or gesture to skip current practice steps, updating the system state accordingly.
+
+## 6. Develop Success Rate Analytics [pending]
+### Dependencies: 4.4
+### Description: Create analytics to calculate and display user success rates, error rates, and other relevant metrics for practice mode.
+### Details:
+Aggregate attempt data, compute success/error rates, and present analytics in a user-friendly format within the tutorial interface.
+
