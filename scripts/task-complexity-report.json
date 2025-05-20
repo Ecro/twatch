@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "generatedAt": "2025-05-20T03:19:39.151Z",
+    "tasksAnalyzed": 12,
+    "thresholdScore": 5,
+    "projectName": "Taskmaster",
+    "usedResearch": true
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "Design Initial Gesture Tutorial UI",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the 'Design Initial Gesture Tutorial UI' task into 5 subtasks covering: welcome/intro screens, gesture demonstration screens, practice mode UI, navigation elements, and visual design system.",
+      "reasoning": "This task involves multiple UI screens with animations, user interaction flows, and adherence to WearOS guidelines. The task success rate metric is critical here, as users need to successfully learn the gestures. The complexity comes from designing for a small circular display while ensuring clarity and usability."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "Develop Tutorial Script Content",
+      "complexityScore": 4,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down the 'Develop Tutorial Script Content' task into 3 subtasks covering: welcome/introduction messaging, gesture instruction scripts, and practice/completion messaging.",
+      "reasoning": "This task is moderately complex as it requires creating concise, clear instructions within character limits for a small screen. The content needs to be precise enough to teach gestures effectively but simple enough to understand quickly. The task is well-defined with clear requirements for each screen."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "Implement Tutorial Animation System",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the 'Implement Tutorial Animation System' task into 4 subtasks covering: animation framework setup, individual gesture animations, performance optimization, and animation-text synchronization.",
+      "reasoning": "This task has high complexity due to the technical challenges of creating optimized animations for a resource-constrained wearable device. Creating accurate visual representations of gestures that align with the actual recognition system adds complexity. Performance considerations and battery impact make this more challenging."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Develop Practice Mode for Tutorial",
+      "complexityScore": 9,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the 'Develop Practice Mode for Tutorial' task into 6 subtasks covering: gesture detection integration, visual feedback system, haptic feedback implementation, attempt tracking/timing, skip functionality, and success rate analytics.",
+      "reasoning": "This task has high complexity as it integrates the IMU pattern recognition system with real-time feedback mechanisms. The task requires implementing both visual and haptic feedback systems while tracking user performance. The error rate metric is particularly relevant here, as the system must accurately detect gestures and provide appropriate feedback."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "Implement IMU Gesture Recognition Model",
+      "complexityScore": 10,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Break down the 'Implement IMU Gesture Recognition Model' task into 7 subtasks covering: data collection, preprocessing pipeline, model architecture design, training process, model optimization, integration with WearOS sensors, and performance testing.",
+      "reasoning": "This is the most complex task in the project, requiring machine learning expertise and deep understanding of IMU sensors. Creating a model that can accurately distinguish between similar gestures while running efficiently on a watch is challenging. The task involves data collection, model training, optimization for resource constraints, and extensive testing."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Implement Tutorial Navigation System",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the 'Implement Tutorial Navigation System' task into 4 subtasks covering: navigation controls implementation, progress tracking, state persistence, and interruption handling.",
+      "reasoning": "This task has moderate complexity due to the need to handle various navigation patterns, state management, and interruptions. The time-on-task metric is relevant here as efficient navigation impacts how quickly users can complete the tutorial. The circular interface adds complexity to navigation design."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Integrate Tutorial with Main App Flow",
+      "complexityScore": 5,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down the 'Integrate Tutorial with Main App Flow' task into 3 subtasks covering: first-launch detection, tutorial state management, and entry point integration from main app.",
+      "reasoning": "This task involves connecting the tutorial to the main application flow with appropriate state management. While not technically complex, it requires careful integration to ensure a seamless user experience and proper handling of various entry points and edge cases."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Implement Tutorial Accessibility Features",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the 'Implement Tutorial Accessibility Features' task into 4 subtasks covering: screen reader support, visual accessibility enhancements, alternative navigation methods, and accessibility testing framework.",
+      "reasoning": "This task has significant complexity due to the need to implement multiple accessibility features while maintaining the tutorial's effectiveness. Ensuring the tutorial works well with TalkBack and other accessibility services on a small watch screen presents unique challenges. The task requires specialized knowledge of accessibility standards."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Implement Tutorial Analytics",
+      "complexityScore": 5,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down the 'Implement Tutorial Analytics' task into 3 subtasks covering: analytics event definition, data collection implementation, and offline storage/synchronization.",
+      "reasoning": "This task has moderate complexity involving implementing analytics tracking across multiple tutorial screens and gestures. The offline storage and synchronization requirements add some complexity, but the task is well-defined with clear metrics to track."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Create Tutorial Onboarding Animation",
+      "complexityScore": 6,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down the 'Create Tutorial Onboarding Animation' task into 3 subtasks covering: storyboard/concept design, animation implementation, and performance optimization.",
+      "reasoning": "Creating an effective onboarding animation for a watch face has moderate complexity due to the need to communicate the core concept visually in a very limited space and time. Performance optimization for the watch hardware adds technical complexity."
+    },
+    {
+      "taskId": 11,
+      "taskTitle": "Implement Tutorial Completion Celebration",
+      "complexityScore": 4,
+      "recommendedSubtasks": 2,
+      "expansionPrompt": "Break down the 'Implement Tutorial Completion Celebration' task into 2 subtasks covering: visual/haptic celebration implementation and transition to main app.",
+      "reasoning": "This task has lower complexity as it involves implementing a brief celebration with defined requirements. The technical aspects are straightforward, though it requires attention to performance and user experience details."
+    },
+    {
+      "taskId": 12,
+      "taskTitle": "Implement Tutorial Localization",
+      "complexityScore": 6,
+      "recommendedSubtasks": 3,
+      "expansionPrompt": "Break down the 'Implement Tutorial Localization' task into 3 subtasks covering: resource externalization, layout adaptations for different languages, and RTL support implementation.",
+      "reasoning": "This task has moderate complexity due to the need to support multiple languages and layouts, including RTL, on a space-constrained watch interface. Ensuring layouts accommodate text expansion while maintaining usability adds complexity."
+    }
+  ]
+}

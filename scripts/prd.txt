@@ -1,0 +1,48 @@
+<context>
+# Overview
+- Gesture Scoreboard MVP allows tennis players wearing a Galaxy Watch 5 to record scores with four predefined wrist gestures.
+- Solves the hassle of forgetting or verbally calling scores during casual matches.
+- Targets weekly club or lesson players who want friction‑free score tracking.
+- Value comes from touch‑free interaction that preserves rally flow and logs basic match data.
+
+# Core Features
+- Gesture Score Entry
+- Detects and logs the four essential scores: 15, 30, 40, Game.
+- Uses on‑device IMU pattern recognition with a lightweight neural model.
+- On‑Screen Undo
+- Lets the user correct a mistaken score by tapping an Undo icon.
+- Ensures reliable tracking even if a gesture is misread.
+- Sensor Data Collection
+- Continuously collects data from all available watch sensors: IMU (Accelerometer, Gyroscope), Heart rate, GPS (if available), Barometer, ambient light, etc.
+- Data is stored locally for each session.
+- Real-Time UI Display
+- Current game score (e.g., 30–15)
+- Small sensor readouts (e.g., heart rate, movement intensity)
+- One-tap Undo button in case of gesture misdetection.
+- Haptic Feedback
+- Provides short vibrations to confirm a score has been recorded.
+- Gives a long vibration when an error is detected.
+- Minimal Match Log
+- Stores a chronological text log of point events on the watch.
+- Log can be transferred to the paired phone for later viewing.
+
+# User Experience
+- User Personas
+- Recreational player who wants to keep score without stopping play.
+- Lesson student who needs quick point tracking during drills.
+- Key User Flows
+- Start Match → brief gesture tutorial → play while gestures are recorded → optional Undo → end Match → view basic log on phone.
+- UI / UX Considerations
+- Simple round overlay showing current game score.
+- One‑tap Undo button on the overlay.
+- Haptic cues for confirmation and errors.
+
+</context>
+<PRD>
+- Initial gesture tutorial script.
+</PRD>
+
+
+
+
+
