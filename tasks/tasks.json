@@ -118,7 +118,7 @@
         1,
         2
       ],
-      "status": "pending",
+      "status": "in-progress",
       "subtasks": [
         {
           "id": 1,
@@ -126,7 +126,7 @@
           "description": "Establish the core animation system architecture for the wearable device tutorial",
           "dependencies": [],
           "details": "Design and implement the base animation framework that supports vector-based hand animations and full-screen background images. Include support for custom animations like bounce and rotation effects. Consider the resource constraints of wearable devices and implement the framework with minimal battery impact.",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": 2,

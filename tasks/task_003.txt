@@ -1,6 +1,6 @@
 # Task ID: 3
 # Title: Implement Tutorial Animation System
-# Status: pending
+# Status: in-progress
 # Dependencies: 1, 2
 # Priority: medium
 # Description: Create animations that demonstrate the correct execution of each scoring gesture to help users learn the proper movements.
@@ -30,7 +30,7 @@ Use vector animations where possible to reduce file size. Ensure animations are 
 6. Ensure animations are visible in various lighting conditions
 
 # Subtasks:
-## 1. Animation Framework Setup [pending]
+## 1. Animation Framework Setup [done]
 ### Dependencies: None
 ### Description: Establish the core animation system architecture for the wearable device tutorial
 ### Details:
