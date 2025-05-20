@@ -8,8 +8,62 @@
       "testStrategy": "1. Conduct usability testing with 3-5 tennis players of varying experience levels\n2. Verify tutorial completion rate metrics\n3. Test readability in outdoor lighting conditions\n4. Ensure animations accurately represent the required gestures\n5. Validate that users can successfully perform gestures after completing the tutorial\n6. Test skip functionality works correctly\n7. Verify UI elements display properly on Galaxy Watch 5",
       "priority": "high",
       "dependencies": [],
-      "status": "in-progress",
-      "subtasks": []
+      "status": "done",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Design Welcome and Introduction Screens",
+          "description": "Create the initial UI screens that greet users and introduce the purpose and benefits of the gesture tutorial, ensuring clarity and engagement on a small circular display.",
+          "dependencies": [],
+          "details": "Include concise messaging, clear branding, and a brief overview of what users will learn. Follow Wear OS guidelines for typography and layout.",
+          "status": "done"
+        },
+        {
+          "id": 2,
+          "title": "Design Gesture Demonstration Screens",
+          "description": "Develop screens that visually demonstrate each supported gesture, using animations or illustrations to show correct wrist movements.",
+          "dependencies": [
+            1
+          ],
+          "details": "Ensure gestures are shown with directional affordances (e.g., 'flick wrist out' for next, 'flick wrist in' for previous) and provide visual feedback for each action. Adhere to Wear OS best practices for gesture clarity.",
+          "status": "done"
+        },
+        {
+          "id": 3,
+          "title": "Design Practice Mode UI",
+          "description": "Create interactive screens where users can practice gestures and receive immediate feedback on their performance.",
+          "dependencies": [
+            2
+          ],
+          "details": "Incorporate real-time feedback, success/failure indicators, and tips for improvement. Ensure the UI is intuitive and supports both gesture and touch input as recommended.",
+          "status": "done"
+        },
+        {
+          "id": 4,
+          "title": "Design Navigation Elements",
+          "description": "Design navigation controls that allow users to move between tutorial steps, repeat demonstrations, or exit the tutorial.",
+          "dependencies": [
+            1,
+            2,
+            3
+          ],
+          "details": "Include gesture-based navigation (e.g., wrist flicks) and touch alternatives. Ensure navigation is consistent, accessible, and follows Wear OS navigation patterns.",
+          "status": "done"
+        },
+        {
+          "id": 5,
+          "title": "Define Visual Design System",
+          "description": "Establish a cohesive visual design system for the tutorial UI, including color palette, typography, iconography, and component styles tailored for Wear OS.",
+          "dependencies": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "details": "Ensure all screens and elements are visually consistent, legible on small circular displays, and align with Material Design for Wear OS.",
+          "status": "done"
+        }
+      ]
     },
     {
       "id": 2,

@@ -1,6 +1,6 @@
 # Task ID: 2
 # Title: Develop Tutorial Script Content
-# Status: pending
+# Status: done
 # Dependencies: 1
 # Priority: high
 # Description: Write clear, concise tutorial script content that guides users through learning the four tennis score gestures.
@@ -30,3 +30,23 @@ Keep all text under 100 characters per screen to ensure readability on the watch
 4. Conduct A/B testing with alternative phrasings if possible
 5. Ensure instructions match the actual gesture recognition implementation
 6. Test with non-tennis players to ensure clarity for beginners
+
+# Subtasks:
+## 1. Create Welcome/Purpose Content [done]
+### Dependencies: None
+### Description: Develop the introductory script content that welcomes users and explains the purpose of the tutorial
+### Details:
+Write concise, engaging welcome messaging that introduces users to the gesture tutorial. Keep text brief for small screens (under 150 characters per screen). Clearly explain what users will learn and why these gestures are valuable. Use conversational tone and include a brief overview of the four gestures they'll be learning.
+
+## 2. Develop Gesture Instruction Content [done]
+### Dependencies: 2.1
+### Description: Create clear, step-by-step instruction scripts for all four gestures
+### Details:
+Write precise instructions for each of the four gestures, breaking down complex movements into simple steps. Include both the physical action required and the result of each gesture. Use active voice and direct language. Ensure each instruction set follows the same format for consistency. Consider including troubleshooting tips for common mistakes. Keep text under 200 characters per instruction screen.
+
+## 3. Craft Practice/Completion Content [done]
+### Dependencies: 2.2
+### Description: Develop script content for practice prompts and completion messaging
+### Details:
+Create encouraging prompts that guide users to practice each gesture. Write clear success indicators so users know when they've performed correctly. Develop congratulatory completion messaging that summarizes what they've learned and encourages continued use. Include next steps or suggestions for applying these gestures in real usage. Maintain the conversational tone established in the welcome section. Keep all text concise for small screens.
+

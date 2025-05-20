@@ -75,8 +75,37 @@
       "dependencies": [
         1
       ],
-      "status": "pending",
-      "subtasks": []
+      "status": "done",
+      "subtasks": [
+        {
+          "id": 1,
+          "title": "Create Welcome/Purpose Content",
+          "description": "Develop the introductory script content that welcomes users and explains the purpose of the tutorial",
+          "dependencies": [],
+          "details": "Write concise, engaging welcome messaging that introduces users to the gesture tutorial. Keep text brief for small screens (under 150 characters per screen). Clearly explain what users will learn and why these gestures are valuable. Use conversational tone and include a brief overview of the four gestures they'll be learning.",
+          "status": "done"
+        },
+        {
+          "id": 2,
+          "title": "Develop Gesture Instruction Content",
+          "description": "Create clear, step-by-step instruction scripts for all four gestures",
+          "dependencies": [
+            1
+          ],
+          "details": "Write precise instructions for each of the four gestures, breaking down complex movements into simple steps. Include both the physical action required and the result of each gesture. Use active voice and direct language. Ensure each instruction set follows the same format for consistency. Consider including troubleshooting tips for common mistakes. Keep text under 200 characters per instruction screen.",
+          "status": "done"
+        },
+        {
+          "id": 3,
+          "title": "Craft Practice/Completion Content",
+          "description": "Develop script content for practice prompts and completion messaging",
+          "dependencies": [
+            2
+          ],
+          "details": "Create encouraging prompts that guide users to practice each gesture. Write clear success indicators so users know when they've performed correctly. Develop congratulatory completion messaging that summarizes what they've learned and encourages continued use. Include next steps or suggestions for applying these gestures in real usage. Maintain the conversational tone established in the welcome section. Keep all text concise for small screens.",
+          "status": "done"
+        }
+      ]
     },
     {
       "id": 3,
