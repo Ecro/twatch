@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- Watch representation -->
+    <path
+        android:name="watch"
+        android:fillColor="#FF000000"
+        android:pathData="M48,8a40,40 0,1 0,0,80a40,40 0,1 0,0,-80z"/>
+
+    <!-- Simple hand/wrist representation attached to the watch -->
+    <!-- This group will be animated for flicks -->
+    <group
+        android:name="hand_wrist"
+        android:pivotX="48"
+        android:pivotY="88">
+        <!-- Simple rectangle for wrist/hand -->
+        <path
+            android:name="wrist_rect"
+            android:fillColor="#FF333333"
+            android:pathData="M38,88 L58,88 L58,100 L38,100 Z"/>
+    </group>
+
+</vector> 

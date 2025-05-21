@@ -36,19 +36,19 @@ Use vector animations where possible to reduce file size. Ensure animations are 
 ### Details:
 Design and implement the base animation framework that supports vector-based hand animations and full-screen background images. Include support for custom animations like bounce and rotation effects. Consider the resource constraints of wearable devices and implement the framework with minimal battery impact.
 
-## 2. Individual Gesture Animations Development [pending]
+## 2. Individual Gesture Animations Development [done]
 ### Dependencies: 3.1
 ### Description: Create specific animations for each tutorial gesture that accurately represent user actions
 ### Details:
 Develop parameterizable animations for each gesture in the tutorial. Implement motion interpretation to translate user actions into visual feedback. Include direct input mode for mirroring user movements and command input mode for triggering specific animations. Ensure animations clearly demonstrate the expected hand and body movements.
 
-## 3. Animation-Text Synchronization System [pending]
+## 3. Animation-Text Synchronization System [done]
 ### Dependencies: 3.1, 3.2
 ### Description: Implement a system to synchronize tutorial text instructions with corresponding animations
 ### Details:
 Create a timing mechanism that coordinates the display of text instructions with their associated animations. Implement event triggers that advance both text and animations at appropriate moments. Include support for user-paced progression through the tutorial with visual cues indicating when to perform each gesture.
 
-## 4. Performance Optimization [pending]
+## 4. Performance Optimization [deferred]
 ### Dependencies: 3.1, 3.2, 3.3
 ### Description: Optimize the animation system for smooth performance on wearable devices
 ### Details:

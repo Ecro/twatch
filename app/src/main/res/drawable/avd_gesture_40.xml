@@ -1,0 +1,9 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/vd_hand_watch">
+    <target
+        android:name="hand_wrist"
+        android:animation="@animator/anim_flick_down_rotate" />
+    <target
+        android:name="hand_wrist"
+        android:animation="@animator/anim_flick_down_return_rotate" />
+</animated-vector> 

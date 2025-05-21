@@ -1,0 +1,6 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/vd_hand_watch">
+    <target
+        android:name="hand_wrist"
+        android:animation="@animator/anim_clockwise_rotate_360" />
+</animated-vector> 

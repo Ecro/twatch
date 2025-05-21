@@ -136,7 +136,7 @@
             1
           ],
           "details": "Develop parameterizable animations for each gesture in the tutorial. Implement motion interpretation to translate user actions into visual feedback. Include direct input mode for mirroring user movements and command input mode for triggering specific animations. Ensure animations clearly demonstrate the expected hand and body movements.",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": 3,
@@ -147,7 +147,7 @@
             2
           ],
           "details": "Create a timing mechanism that coordinates the display of text instructions with their associated animations. Implement event triggers that advance both text and animations at appropriate moments. Include support for user-paced progression through the tutorial with visual cues indicating when to perform each gesture.",
-          "status": "pending"
+          "status": "done"
         },
         {
           "id": 4,
@@ -159,7 +159,7 @@
             3
           ],
           "details": "Conduct performance testing to identify and resolve bottlenecks in the animation system. Implement techniques to reduce CPU/GPU usage such as frame skipping for less critical animations. Optimize vector graphics rendering and implement caching mechanisms where appropriate. Measure and minimize battery consumption impact of the tutorial animation system.",
-          "status": "pending"
+          "status": "deferred"
         }
       ]
     },
