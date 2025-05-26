@@ -58,65 +58,59 @@ class AnimationDemoActivity : AppCompatActivity() {
         // Load the AnimatedVectorDrawable for the 15 point gesture
         // Get the drawable ID from the intent
         val gestureDrawableId = intent.getIntExtra(EXTRA_GESTURE_DRAWABLE_ID, 0)
+        val drawable = if (gestureDrawableId != 0) getDrawable(gestureDrawableId) else null
 
-        if (gestureDrawableId != 0) {
-            val drawable = getDrawable(gestureDrawableId)
+        if (gestureDrawableId == 0 || drawable !is AnimatedVectorDrawable) {
+            // Handle error if no ID is provided or drawable is not AnimatedVectorDrawable
+            instructionTextView.text = "Error loading animation or no ID provided."
+        } else {
+            // Proceed with animation setup
+            animationImageView.setImageDrawable(drawable)
 
-            if (drawable is AnimatedVectorDrawable) {
-                animationImageView.setImageDrawable(drawable)
+            // Create a ValueAnimator to track animation progress
+            synchronizationAnimator = ValueAnimator.ofFloat(0f, 1f)
+            synchronizationAnimator?.duration = drawable.intrinsicDuration.toLong() // Match duration
 
-                // Create a ValueAnimator to track animation progress
-                synchronizationAnimator = ValueAnimator.ofFloat(0f, 1f)
-                synchronizationAnimator?.duration = drawable.intrinsicDuration.toLong() // Match duration
+            synchronizationAnimator?.addUpdateListener {
+                val progress = it.animatedValue as Float
+                updateInstructionTextForProgress(progress, gestureDrawableId)
+            }
 
-                synchronizationAnimator?.addUpdateListener {
-                    val progress = it.animatedValue as Float
-                    // Update text based on animation progress and gesture-specific sync points
-                    val syncPoints = gestureSyncPoints[gestureDrawableId] ?: emptyList()
-                    for (syncPoint in syncPoints) {
-                        if (progress >= syncPoint.progress) {
-                            instructionTextView.text = syncPoint.text
-                        } else {
-                            break // Assuming sync points are ordered by progress
-                        }
-                    }
+            // Attach a listener to update text when animation ends
+            drawable.addListener(object : AnimatorListenerAdapter() {
+                override fun onAnimationStart(animation: Animator) {
+                    super.onAnimationStart(animation)
+                    // Start the synchronization animator when the main animation starts
+                    synchronizationAnimator?.start()
+                    // Set initial text when animation starts
+                    instructionTextView.text = gestureSyncPoints[gestureDrawableId]?.firstOrNull()?.text ?: "Watch the animation:"
                 }
 
-                // Attach a listener to update text when animation ends
-                drawable.addListener(object : AnimatorListenerAdapter() {
-                    override fun onAnimationStart(animation: Animator) {
-                        super.onAnimationStart(animation)
-                        // Start the synchronization animator when the main animation starts
-                        synchronizationAnimator?.start()
-                        // Set initial text when animation starts
-                        instructionTextView.text = gestureSyncPoints[gestureDrawableId]?.firstOrNull()?.text ?: "Watch the animation:"
-                    }
+                override fun onAnimationEnd(animation: Animator) {
+                    super.onAnimationEnd(animation)
+                    // Stop or reset the synchronization animator
+                    synchronizationAnimator?.cancel() // Or reset as needed
+                    // Update text after animation finishes
+                    instructionTextView.text = gestureSyncPoints[gestureDrawableId]?.lastOrNull()?.text ?: "Animation demonstrated!"
+                }
+            })
 
-                    override fun onAnimationEnd(animation: Animator) {
-                        super.onAnimationEnd(animation)
-                        // Stop or reset the synchronization animator
-                        synchronizationAnimator?.cancel() // Or reset as needed
-                        // Update text after animation finishes
-                        instructionTextView.text = gestureSyncPoints[gestureDrawableId]?.lastOrNull()?.text ?: "Animation demonstrated!"
-                    }
-                })
-
-                // Start the animation
-                drawable.start()
-
-            } else {
-                // Handle error if drawable is not AnimatedVectorDrawable
-                instructionTextView.text = "Error loading animation or no ID provided."
-            }
-        } else {
-            // Handle error if drawable is not AnimatedVectorDrawable
-            instructionTextView.text = "Error loading animation or no ID provided."
+            // Start the animation
+            drawable.start()
         }
+    }
+
+    private fun updateInstructionTextForProgress(progress: Float, gestureDrawableId: Int) {
+        val syncPoints = gestureSyncPoints[gestureDrawableId] ?: emptyList()
+        val currentSyncPoint = syncPoints.lastOrNull { progress >= it.progress }
+        currentSyncPoint?.let { instructionTextView.text = it.text }
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        // Clean up the animator to prevent memory leaks
+        // Stop the AnimatedVectorDrawable animation
+        (animationImageView.drawable as? AnimatedVectorDrawable)?.stop()
+        // Clean up the synchronization animator to prevent memory leaks
         synchronizationAnimator?.cancel()
         synchronizationAnimator = null
     }
